@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Geofence
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="ion-padding">
+    <p>Fences areas:</p>
+    <ion-list>
+      <ion-item *ngFor="let f of fences">
+        <h6>{{f.name.toUpperCase()}} ({{f.children.length}})</h6>&nbsp;
+        <h6 *ngFor="let c of f.children">
+          <ion-label>
+            {{c.name}}&nbsp;
+          </ion-label>
+        </h6>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div class="ion-padding">
+    <p>Logs:</p>
+    <ion-list>
+      <ion-item *ngFor="let l of logs">
+        <h6>{{l.action}} "{{l.name}}" at {{l.date | date: 'yyyy-MM-dd HH:mm:ss' }}</h6>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

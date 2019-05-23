@@ -1,0 +1,7 @@
+{
+  "name": "geofence",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
